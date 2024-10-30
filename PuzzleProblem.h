@@ -12,7 +12,7 @@ class PuzzleProblem {
         PuzzleStatePtr goalState; //8 puzzle layout
 
     public:
-        PuzzleProblem(const vector<vector<int>>& initial);
+        PuzzleProblem(const vector<vector<int> >& initial);
 
         //checks if a given state machines the goal state
         //dereferences the provided and goal state pointer and uses the overloaded operator in uzzle state to compapre configs

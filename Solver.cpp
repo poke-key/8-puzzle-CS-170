@@ -5,9 +5,9 @@ Solver::Solver(const PuzzleProblem& prob) : problem(prob) {}
 
 pair<PuzzleStatePtr, SearchStats> Solver::solve(const string& heuristicType) {
     priority_queue<pair<double, PuzzleStatePtr>, 
-                      vector<pair<double, PuzzleStatePtr>>,
+                      vector<pair<double, PuzzleStatePtr> >,
                       CompareStates> frontier;
-    set<vector<vector<int>>> explored;
+    set<vector<vector<int> > > explored;
     SearchStats stats;
 
     //frontier stores nodes for expansion, prioritizing based on
