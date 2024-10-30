@@ -21,5 +21,16 @@ int main() {
     // some inputs
     string choice; 
     cin >> choice;
-
+    vector<vector<int>> initialState(3, vector<int>(3));
+    
+    //show a sample rxample puzzle if they select choice 1
+    if (choice == "1") {
+        initialState = {
+            {1, 3, 0},
+            {4, 2, 6},
+            {7, 5, 8}
+        };
+    } 
+    // now else
+    
 }
