@@ -61,4 +61,15 @@ int main() {
 
     PuzzleProblem problem(initialState);
     Solver solver(problem);
+
+    //call solve on solver, returning goalState and stats (which contains
+    //information about nodes expanded, queue size, solution depth)
+    auto [goalState, stats] = solver.solve(heuristicMap[algorithmChoice]);
+
+    if (goalState) {
+        cout << "\nGoal!!!\n"
+                  << "\nTo solve this problem the search algorithm expanded a total of "
+                  << stats.nodesExpanded << " nodes.\n"
+                  << "The maximum number of nodes in the queue at any one time: ";
+    }
 }
