@@ -8,7 +8,7 @@ pair<PuzzleStatePtr, SearchStats> Solver::solve(const string& heuristicType) {
                       vector<pair<double, PuzzleStatePtr> >,
                       CompareStates> frontier;
     set<vector<vector<int> > > explored;
-    SearchStats stats;
+    SearchStats stats; //for the extra credit
 
     //frontier stores nodes for expansion, prioritizing based on
     //cost + heurstic
@@ -41,7 +41,7 @@ pair<PuzzleStatePtr, SearchStats> Solver::solve(const string& heuristicType) {
 
         if (explored.find(current->board) != explored.end()) continue;
         explored.insert(current->board);
-        stats.nodesExpanded++;
+        stats.nodesExpanded++; //extra credit part
 
         //outputs current state, cost, and heuristic
         //call getneighbors on curr state to generate possible neighbors
