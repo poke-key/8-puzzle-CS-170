@@ -32,5 +32,14 @@ int main() {
         };
     } 
     // now else for not choice 1 user input
-    
+    else {
+        cout << "Enter your puzzle, use a zero to represent the blank\n";
+        for (int i = 0; i < 3; i++) {
+            cout << "Enter the " << (i == 0 ? "first" : i == 1 ? "second" : "third")
+                     << " row, use space or tabs between numbers: "; // prompt to custom enter the user desired puzzle
+            for (int j = 0; j < 3; j++) {
+                cin >> initialState[i][j]; // get each tile
+            }
+        }
+    }
 }
