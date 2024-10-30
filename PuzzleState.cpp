@@ -1,7 +1,7 @@
 #include "PuzzleState.h"
 
 //constructor for the state of the puzles, contains a empty slot b, a parent p, an action, action, a cost, and size 
-    PuzzleState::PuzzleState(const vector<vector<int>>& b, PuzzleStatePtr p = nullptr, const string& act = "", int g = 0) : board(b), parent(p), action(act), gCost(g), size(b.size()) {}
+    PuzzleState::PuzzleState(const vector<vector<int>>& b, PuzzleStatePtr p = nullptr, const string& act = "", int g = 0) : board(b), parent(p), actions(act), gCost(g), size(b.size()) {}
 
     //operator overloading comparing 2 states to check if they have identical
     //board configurations for goal checks
@@ -33,7 +33,7 @@
 
         auto [blankI, blankJ] = findBlank();
 
-        for (const auto& [action, delta] : moves) {
+        for (const auto& [actions, delta] : moves) {
             int newI = blankI + delta.first;
             int newJ = blankJ + delta.second;
 
@@ -42,7 +42,7 @@
                 swap(newBoard[blankI][blankJ], newBoard[newI][newJ]);
                 auto newState = make_shared<PuzzleState>(newBoard);
                 newState->parent = make_shared<PuzzleState>(*this);
-                newState->action = action;
+                newState->actions = actions;
                 newState->gCost = gCost + 1;
                 neighbors.push_back(newState);
             }
