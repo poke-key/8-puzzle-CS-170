@@ -17,7 +17,7 @@ class PuzzleState {
 public:
     vector<vector<int> > board; //grid
     PuzzleStatePtr parent;
-    string actions; //up, down, etc: moves
+    string action; //up, down, etc: moves
     int gCost; //tracks the cost to reach the state from initial state
     int size; //gets the dimension of the puzzle
 
