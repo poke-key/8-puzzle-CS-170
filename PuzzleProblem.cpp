@@ -25,8 +25,10 @@ int PuzzleProblem::misplacedTiles(const PuzzleStatePtr& state) const {
 
     int count = 0;
     for(int i = 0; i < state->size; i++) {
-        if(state->board[i][j] != 0 && state->board[i][j] != goalState->board[i][j]) 
-            count++;
+        for(int j = 0; j < state->size; j++) {
+            if(state->board[i][j] != 0 && state->board[i][j] != goalState->board[i][j]) 
+                count++;
+        }
     }
     return count;
 }
