@@ -10,23 +10,16 @@
 #include <algorithm>
 #include <utility>
 #include "PuzzleState.h"
+#include "Solver.h"
 
 using namespace std;
 
-// Custom comparator for priority queue. prioritize nodes with the lowest cost
-//(g(n) + h(n)) for expansion in queue. this creates a min heap.
-struct CompareStates {
-    bool operator()(const pair<double, PuzzleStatePtr>& a,
-                   const pair<double, PuzzleStatePtr>& b) const {
-        return a.first > b.first;  // Min heap
-    }
-};
-
-
 int main() {
 
-    cout << "Hello World!" << endl;
-
-    return 0;
+    cout << "Welcome to 8 puzzle solver.\n"; // hi greetigh
+    cout << "Type '1' to use a default puzzle, or '2' to enter your own puzzle: ";
+    // some inputs
+    string choice; 
+    cin >> choice;
 
 }
