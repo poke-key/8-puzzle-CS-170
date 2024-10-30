@@ -19,6 +19,8 @@ class PuzzleProblem {
 
         bool isGoal(const PuzzleStatePtr& state) const;
 
+        //PuzzleStatePtr getInitialState() const;
+
         PuzzleStatePtr getInitialstate() const;
 
     //counts all tiles that differ in value from the goal config, ignoring blank
