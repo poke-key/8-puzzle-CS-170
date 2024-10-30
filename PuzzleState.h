@@ -15,14 +15,14 @@ using PuzzleStatePtr = shared_ptr<PuzzleState>; //enables shared ownership of po
 class PuzzleState {
 
 public:
-    vector<vector<int>> board; //grid
+    vector<vector<int> > board; //grid
     PuzzleStatePtr parent;
     string actions; //up, down, etc: moves
     int gCost; //tracks the cost to reach the state from initial state
     int size; //gets the dimension of the puzzle
 
     //constructor: contains an empty space b, pointer, action and cost
-    PuzzleState(const vector<vector<int>>& b, PuzzleStatePtr p = nullptr, const string& act = "", int g = 0);
+    PuzzleState(const vector<vector<int> >& b, PuzzleStatePtr p = nullptr, const string& act = "", int g = 0);
 
     //operator overload to compare 2 states for identicalness, board config for goal checks
     bool operator==(const PuzzleState& other) const;

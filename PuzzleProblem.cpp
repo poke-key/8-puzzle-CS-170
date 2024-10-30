@@ -1,10 +1,10 @@
 #include "PuzzleProblem.h"
 
-PuzzleProblem::PuzzleProblem(const vector<vector<int>>& initial) {
+PuzzleProblem::PuzzleProblem(const vector<vector<int> >& initial) {
 
     initialState = make_shared<PuzzleState>(initial);
 
-    vector<vector<int>> goal = {
+    vector<vector<int> > goal = {
 
         {1, 2, 3},
         {4, 5, 6},
