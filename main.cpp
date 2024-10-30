@@ -81,7 +81,7 @@ int main() {
         vector<pair<string, PuzzleStatePtr>> path;
         auto current = goalState;
         while (current) {
-            path.push_back(make_pair(current->actions, current));
+            path.push_back(make_pair(current->action, current));
             current = current->parent;
         }
 
