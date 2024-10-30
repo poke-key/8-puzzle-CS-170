@@ -1,7 +1,7 @@
 #include "PuzzleState.h"
 
 //constructor for the state of the puzles, contains a empty slot b, a parent p, an action, action, a cost, and size 
-    PuzzleState::PuzzleState(const vector<vector<int> >& b, PuzzleStatePtr p = nullptr, const string& act = "", int g = 0) : board(b), parent(p), actions(act), gCost(g), size(b.size()) {}
+    //PuzzleState::PuzzleState(const vector<vector<int> >& b, PuzzleStatePtr p = nullptr, const string& act = "", int g = 0) : board(b), parent(p), actions(act), gCost(g), size(b.size()) {}
 
     //operator overloading comparing 2 states to check if they have identical
     //board configurations for goal checks
