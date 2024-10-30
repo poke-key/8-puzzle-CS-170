@@ -42,4 +42,12 @@ int main() {
             }
         }
     }
+    // now we want to ask or the desired algorithm below is the prompt
+    cout << "\nEnter your choice of algorithm:\n"
+              << "1. Uniform Cost Search\n"
+              << "2. A* with the Misplaced Tile heuristic\n"
+              << "3. A* with the Euclidean distance heuristic\n";
+    
+    string algorithmChoice;
+    cin >> algorithmChoice;
 }
