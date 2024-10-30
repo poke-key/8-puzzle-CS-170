@@ -67,9 +67,36 @@ int main() {
     auto [goalState, stats] = solver.solve(heuristicMap[algorithmChoice]);
 
     if (goalState) {
+        // prompt below gfor goalstate
         cout << "\nGoal!!!\n"
                   << "\nTo solve this problem the search algorithm expanded a total of "
                   << stats.nodesExpanded << " nodes.\n"
-                  << "The maximum number of nodes in the queue at any one time: ";
+                  << "The maximum number of nodes in the queue at any one time: "
+                  << stats.maxQueueSize << "\n"
+                  << "The depth of the goal node was " << stats.depth << "\n";
+
+        //not needed but useful to see the solution path
+        //traces back from goalState to initial state using parent pointers
+        //gathering each state in the path
+        vector<pair<string, PuzzleStatePtr>> path;
+        auto current = goalState;
+        while (current) {
+            path.push_back(make_pair(current->action, current));
+            current = current->parent;
+        }
+
+        if (!path.empty()) {
+            cout << "\nSolution path:\n";
+            for (auto it = path.rbegin() + 1; it != path.rend(); ++it) {
+                cout << "\n" << it->first << ":\n";
+                cout << it->second->toString();
+            }
+        }
+    } 
+    else {
+        // edge
+        cout << "\nNo solution found!\n";
     }
+
+    return 0;
 }
