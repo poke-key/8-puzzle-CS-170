@@ -31,6 +31,6 @@ int main() {
             {7, 5, 8}
         };
     } 
-    // now else
+    // now else for not choice 1 user input
     
 }
