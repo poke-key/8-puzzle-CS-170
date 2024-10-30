@@ -10,6 +10,8 @@
 #include <algorithm>
 #include <utility>
 #include "PuzzleState.h"
+#include "Solver.h"
+#include "PuzzleProblem.h"
 
 using namespace std;
 
