@@ -18,7 +18,7 @@ struct SearchStats {
 struct CompareStates {
 
     bool operator()(const pair<double, PuzzleStatePtr>& a, const pair<double, PuzzleStatePtr>& b) const {
-        return a.first > b.first //min heap
+        return a.first > b.first; //min heap
     }
 };
 

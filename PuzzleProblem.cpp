@@ -17,7 +17,7 @@ bool PuzzleProblem::isGoal(const PuzzleStatePtr &state) const {
     return *state == *goalState;
 }
 
-PuzzleStatePtr PuzzleProblem::getInitialState() const {
+PuzzleStatePtr PuzzleProblem::getInitialstate() const {
     return initialState;
 }
 
