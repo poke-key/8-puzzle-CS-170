@@ -50,4 +50,15 @@ int main() {
     
     string algorithmChoice;
     cin >> algorithmChoice;
+
+    //now we map a value to each heuristic choice below
+    //this helps if we want to add more heuristics, all we would need to do
+    //is to add a new key val pair for the heuristic
+    map<string, string> heuristicMap;
+    heuristicMap["1"] = "uniform";
+    heuristicMap["2"] = "misplaced";
+    heuristicMap["3"] = "euclidean";
+
+    PuzzleProblem problem(initialState);
+    Solver solver(problem);
 }
